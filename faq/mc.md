@@ -17,6 +17,8 @@
 
 <https://www.lanzouw.com/b01ipzwyb> 密码:**gh902**
 
+打开文件夹，运行**x64.exe**（或**x64**）,按回车<kbd>Enter</kbd>解压JDK
+
 注册、登录皮肤站
 -
 打开PCL，如果您没有LittleSkin账号，请点击**注册账号**注册一个
