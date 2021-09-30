@@ -4,11 +4,11 @@
 
 右键文件夹->**属性**->**隐藏**->**确定**
 
-![mc-1](/faq/_images/mc-1.png)
+![mc-1]([/faq/_images/mc-1.png](https://raw.githubusercontent.com/fanzijun-github/fanzijun.github.io/gh-pages/faq/_images/mc-1.png))
 
 每次使用时，点击上方的**查看**，选中**隐藏的项目**，即可看见隐藏的文件夹
 
-![mc-2](/faq/_images/mc-2.png)
+![mc-2]([/faq/_images/mc-2.png](https://raw.githubusercontent.com/fanzijun-github/fanzijun.github.io/gh-pages/faq/_images/mc-2.png))
 
 下载客户端
 -
@@ -26,13 +26,13 @@
 <details>
   <summary>点击查看详细内容</summary>
 
-  ![mc-3](/faq/_images/mc-3.png)
+  ![mc-3]([/faq/_images/mc-3.png](https://raw.githubusercontent.com/fanzijun-github/fanzijun.github.io/gh-pages/faq/_images/mc-3.png))
 
-  ![mc-4](/faq/_images/mc-4.png)
+  ![mc-4]([/faq/_images/mc-4.png](https://raw.githubusercontent.com/fanzijun-github/fanzijun.github.io/gh-pages/faq/_images/mc-4.png))
 
   点击左侧的**角色管理**，创建一个角色（请使用英文大小写字母、数字0~9或下划线_）
 
-  ![mc-5](/faq/_images/mc-5.png)
+  ![mc-5]([/faq/_images/mc-5.png](https://raw.githubusercontent.com/fanzijun-github/fanzijun.github.io/gh-pages/faq/_images/mc-5.png))
 
   之后您可以前往**皮肤库**寻找您喜欢的皮肤，并在**我的衣柜**里使用
 
