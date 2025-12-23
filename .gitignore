@@ -1,0 +1,6 @@
+.cache
+site
+notes/.obsidian
+.vscode
+.DS_Store
+.venv
