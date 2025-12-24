@@ -1,3 +1,8 @@
+// 确保运行时有 `base_url` 变量，若主题未注入则回退到相对根路径
+if (typeof base_url === 'undefined') {
+    var base_url = '.';
+}
+
 // 渲染 [!NOTE]/[!WARN]/[!WARNING]/[!ERROR] 等块，并适配 Obsidian 风格的 !note / !tip(s) / !important 等标记
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('blockquote p').forEach(function (p) {
