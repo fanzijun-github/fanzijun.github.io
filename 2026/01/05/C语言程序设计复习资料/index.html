@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#B0D491" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#B0D491" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#B0D491">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"knowledge.zijunjun.top","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":"flat","style":null},"fold":{"enable":false,"height":500},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言程序设计期末复习资料">
+<meta property="og:url" content="http://knowledge.zijunjun.top/2026/01/05/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/index.html">
+<meta property="og:site_name" content="fanzijun">
+<meta property="og:description" content="...">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-01-05T09:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-05T10:46:03.742Z">
+<meta property="article:author" content="fanzijun">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://knowledge.zijunjun.top/2026/01/05/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://knowledge.zijunjun.top/2026/01/05/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/","path":"2026/01/05/C语言程序设计复习资料/","title":"C语言程序设计期末复习资料"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C语言程序设计期末复习资料 | fanzijun</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="/css/callout_blocks.css">
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">fanzijun</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E7%BB%93%E6%9E%84%E4%B8%8E%E5%A4%8D%E4%B9%A0%E7%AD%96%E7%95%A5"><span class="nav-number">1.</span> <span class="nav-text"> 一、期末考试结构与复习策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%80%83%E8%AF%95%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> 考试形式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E6%A6%82%E8%BF%B0linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%AF%91%E4%B8%8E%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D"><span class="nav-number">2.</span> <span class="nav-text"> 二、概述：Linux环境下程序编译与文件后缀名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%90%8E%E7%BC%80%E5%90%8D"><span class="nav-number">2.1.</span> <span class="nav-text"> 文件类型与后缀名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%99%E5%AD%A6%E5%BA%93%E5%88%97%E8%A1%A8%E4%BD%9C%E8%80%85%E6%8F%90%E4%BE%9B"><span class="nav-number">2.2.</span> <span class="nav-text"> 教学库列表（作者提供）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E5%BA%93-graphicsh-%E5%87%BD%E6%95%B0%E8%A1%A8"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 图形库 graphics.h 函数表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BA%93-randomh-%E5%87%BD%E6%95%B0%E8%A1%A8"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 随机数库 random.h 函数表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%BA%93-simpioh-%E5%87%BD%E6%95%B0%E8%A1%A8"><span class="nav-number">2.2.3.</span> <span class="nav-text"> 输入输出库 simpio.h 函数表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BA%93-strlibh-%E5%87%BD%E6%95%B0%E8%A1%A8"><span class="nav-number">2.2.4.</span> <span class="nav-text"> 字符串库 strlib.h 函数表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%B1%BB%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">2.2.4.1.</span> <span class="nav-text"> 第一类：基本操作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%B1%BB%E6%AF%94%E8%BE%83"><span class="nav-number">2.2.4.2.</span> <span class="nav-text"> 第二类：比较</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%B1%BB%E6%90%9C%E7%B4%A2"><span class="nav-number">2.2.4.3.</span> <span class="nav-text"> 第三类：搜索</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%B1%BB%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.2.4.4.</span> <span class="nav-text"> 第四类：大小写转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%B1%BB%E6%95%B0%E5%AD%97-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.2.4.5.</span> <span class="nav-text"> 第五类：数字 ↔ 字符串</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.</span> <span class="nav-text"> 常用编译命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E9%80%9A%E8%BF%87%E4%BE%8B%E5%AD%90%E5%AD%A6%E4%B9%A0hello-world-%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text"> 三、通过例子学习：Hello World 程序结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text"> 四、数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text"> 五、表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3a-%E5%B8%B8%E9%87%8F"><span class="nav-number">5.1.</span> <span class="nav-text"> 3.a. 常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3b-%E5%8F%98%E9%87%8F"><span class="nav-number">5.2.</span> <span class="nav-text"> 3.b. 变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3c-%E8%B5%8B%E5%80%BC"><span class="nav-number">5.3.</span> <span class="nav-text"> 3.c. 赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3d-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">5.4.</span> <span class="nav-text"> 3.d. 运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3e-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">5.5.</span> <span class="nav-text"> 3.e. 类型转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD-%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A3%E5%A4%8D%E5%90%88%E8%B5%8B%E5%80%BC"><span class="nav-number">6.</span> <span class="nav-text"> 六、问题求解：复合赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.</span> <span class="nav-text"> 七、控制语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2a-for-%E5%BE%AA%E7%8E%AF"><span class="nav-number">7.1.</span> <span class="nav-text"> 2.a. for 循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2b-while-%E5%BE%AA%E7%8E%AF"><span class="nav-number">7.2.</span> <span class="nav-text"> 2.b. while 循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2c-if-else-%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.3.</span> <span class="nav-text"> 2.c. if-else 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A5%E5%85%85switch-%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.4.</span> <span class="nav-text"> 补充：switch 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-%E4%B8%8E-while-%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="nav-number">7.5.</span> <span class="nav-text"> for 与 while 的相互转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB-%E5%87%BD%E6%95%B0"><span class="nav-number">8.</span> <span class="nav-text"> 八、函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-number">8.1.</span> <span class="nav-text"> 1. 函数声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-return-%E8%AF%AD%E5%8F%A5"><span class="nav-number">8.2.</span> <span class="nav-text"> 2. return 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="nav-number">8.3.</span> <span class="nav-text"> 3. 调用函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%8F%98%E9%87%8F"><span class="nav-number">8.4.</span> <span class="nav-text"> 4. 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4a-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="nav-number">8.4.1.</span> <span class="nav-text"> 4.a. 全局变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4b-%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-number">8.4.2.</span> <span class="nav-text"> 4.b. 局部变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4c-%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">8.4.3.</span> <span class="nav-text"> 4.c. 变量的作用域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D-%E6%8E%A5%E5%8F%A3%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BA%93%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-number">9.</span> <span class="nav-text"> 九、接口：随机数库的定义和使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E5%AD%97%E7%AC%A6"><span class="nav-number">10.</span> <span class="nav-text"> 十、字符串与字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">10.1.</span> <span class="nav-text"> 理解字符和字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B"><span class="nav-number">10.2.</span> <span class="nav-text"> 1. 枚举类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1a-%E5%AE%9A%E4%B9%89"><span class="nav-number">10.2.1.</span> <span class="nav-text"> 1.a. 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1b-%E6%93%8D%E4%BD%9C"><span class="nav-number">10.2.2.</span> <span class="nav-text"> 1.b. 操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="nav-number">10.3.</span> <span class="nav-text"> 2. 字符类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2a-char"><span class="nav-number">10.3.1.</span> <span class="nav-text"> 2.a. char</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2b-ascii%E7%A0%81"><span class="nav-number">10.3.2.</span> <span class="nav-text"> 2.b. ASCII码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2c-%E8%BD%AC%E4%B9%89%E7%AC%A6"><span class="nav-number">10.3.3.</span> <span class="nav-text"> 2.c. 转义符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2d-%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97"><span class="nav-number">10.3.4.</span> <span class="nav-text"> 2.d. 字符运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2e-ctypeh-%E5%BA%93"><span class="nav-number">10.3.5.</span> <span class="nav-text"> 2.e. ctype.h 库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-strlibh-%E5%BA%93%E6%95%99%E5%AD%A6%E5%BA%93"><span class="nav-number">10.4.</span> <span class="nav-text"> 3. strlib.h 库（教学库）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3a-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">10.4.1.</span> <span class="nav-text"> 3.a. 创建一个字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3b-%E8%8E%B7%E5%8F%96%E9%95%BF%E5%BA%A6"><span class="nav-number">10.4.2.</span> <span class="nav-text"> 3.b. 获取长度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3c-%E4%BB%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E9%80%89%E6%8B%A9%E5%AD%97%E7%AC%A6"><span class="nav-number">10.4.3.</span> <span class="nav-text"> 3.c. 从字符串里选择字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3d-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">10.4.4.</span> <span class="nav-text"> 3.d. 连接两个字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3e-%E5%AD%97%E7%AC%A6%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">10.4.5.</span> <span class="nav-text"> 3.e. 字符转换成字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3f-%E6%8A%BD%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%80%E9%83%A8%E5%88%86"><span class="nav-number">10.4.6.</span> <span class="nav-text"> 3.f. 抽取字符串一部分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3g-%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">10.4.7.</span> <span class="nav-text"> 3.g. 比较两个字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3h-%E5%9C%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E6%90%9C%E7%B4%A2"><span class="nav-number">10.4.8.</span> <span class="nav-text"> 3.h. 在字符串里搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3i-%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2"><span class="nav-number">10.4.9.</span> <span class="nav-text"> 3.i. 大小写转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3j-%E6%95%B0%E5%80%BC%E8%BD%AC%E6%8D%A2"><span class="nav-number">10.4.10.</span> <span class="nav-text"> 3.j. 数值转换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E4%B8%80-%E6%95%B0%E7%BB%84"><span class="nav-number">11.</span> <span class="nav-text"> 十一、数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89-%E4%BD%BF%E7%94%A8-%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="nav-number">11.1.</span> <span class="nav-text"> 一维数组的定义、使用、参数传递</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%95%B0%E7%BB%84%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">11.1.1.</span> <span class="nav-text"> 1. 数组的声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%80%9A%E8%BF%87%E4%B8%8B%E6%A0%87%E9%80%89%E6%8B%A9%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0"><span class="nav-number">11.1.2.</span> <span class="nav-text"> 2. 通过下标选择数组元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-sizeof-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">11.1.3.</span> <span class="nav-text"> 3. sizeof() 运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%95%B0%E7%BB%84%E7%9A%84%E4%BC%A0%E5%8F%82"><span class="nav-number">11.1.4.</span> <span class="nav-text"> 4. 数组的传参</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4a-%E4%BC%A0%E5%8F%82%E6%9C%BA%E5%88%B6"><span class="nav-number">11.1.4.1.</span> <span class="nav-text"> 4.a. 传参机制</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E4%BA%8C-%E6%8C%87%E9%92%88"><span class="nav-number">12.</span> <span class="nav-text"> 十二、指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%A3%B0%E6%98%8E%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8F"><span class="nav-number">12.1.</span> <span class="nav-text"> 1. 声明指针变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%92%8C-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">12.2.</span> <span class="nav-text"> 2. &amp; 和 * 运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%BC%95%E7%94%A8%E4%BC%A0%E5%8F%82"><span class="nav-number">12.3.</span> <span class="nav-text"> 3. 引用传参</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%84"><span class="nav-number">12.4.</span> <span class="nav-text"> 4. 指针和数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4a-%E6%8C%87%E9%92%88%E8%BF%90%E7%AE%97"><span class="nav-number">12.4.1.</span> <span class="nav-text"> 4.a. 指针运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4b-%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">12.4.2.</span> <span class="nav-text"> 4.b. 指针与数组的关系</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E4%B8%89-%E5%86%8D%E8%AE%BA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">13.</span> <span class="nav-text"> 十三、再论字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84"><span class="nav-number">13.1.</span> <span class="nav-text"> 1. 字符数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1a-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">13.1.1.</span> <span class="nav-text"> 1.a. 初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1b-%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88"><span class="nav-number">13.1.2.</span> <span class="nav-text"> 1.b. 字符指针</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1c-%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0"><span class="nav-number">13.1.3.</span> <span class="nav-text"> 1.c. 输出函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1d-%E8%BE%93%E5%85%A5%E5%87%BD%E6%95%B0"><span class="nav-number">13.1.4.</span> <span class="nav-text"> 1.d. 输入函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-stringh-%E5%BA%93%E6%A0%87%E5%87%86%E5%BA%93"><span class="nav-number">13.2.</span> <span class="nav-text"> 2. string.h 库（标准库）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2a-strcpy"><span class="nav-number">13.2.1.</span> <span class="nav-text"> 2.a. strcpy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2b-strncpy"><span class="nav-number">13.2.2.</span> <span class="nav-text"> 2.b. strncpy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2c-strlen"><span class="nav-number">13.2.3.</span> <span class="nav-text"> 2.c. strlen</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2d-strcat"><span class="nav-number">13.2.4.</span> <span class="nav-text"> 2.d. strcat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2e-strcmp"><span class="nav-number">13.2.5.</span> <span class="nav-text"> 2.e. strcmp</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%83%AF%E7%94%A8%E6%B3%95"><span class="nav-number">13.3.</span> <span class="nav-text"> 3. 字符串惯用法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3a-%E6%90%9C%E7%B4%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%A9%BA%E5%AD%97%E7%AC%A6%E6%83%AF%E7%94%A8%E6%B3%95"><span class="nav-number">13.3.1.</span> <span class="nav-text"> 3.a. 搜索字符串空字符惯用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3b-%E5%A4%8D%E5%88%B6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%83%AF%E7%94%A8%E6%B3%95"><span class="nav-number">13.3.2.</span> <span class="nav-text"> 3.b. 复制字符串惯用法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E7%BB%84%E4%BA%8C%E7%BB%B4%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84"><span class="nav-number">13.4.</span> <span class="nav-text"> 4. 字符串数组（二维字符数组）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E5%9B%9B-%E8%AE%B0%E5%BD%95%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">14.</span> <span class="nav-text"> 十四、记录（结构体）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">14.1.</span> <span class="nav-text"> 记录的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%AE%B0%E5%BD%95%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">14.2.</span> <span class="nav-text"> 创建记录的数据库</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">fanzijun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://knowledge.zijunjun.top/2026/01/05/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="fanzijun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fanzijun">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C语言程序设计期末复习资料 | fanzijun">
+      <meta itemprop="description" content="...">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言程序设计期末复习资料
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-01-05 17:00:00 / 修改时间：18:46:03" itemprop="dateCreated datePublished" datetime="2026-01-05T17:00:00+08:00">2026-01-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">...</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><details class="custom-callout note" open><summary class="callout-title"><div class="callout-icon"></div><div>说明  </div>
+<div class="callout-fold"></div></summary><div class="callout-body">
+<p>仅供参考，没考到别怪我</p>
+</div>
+</details><hr />
+<h2 id="一-期末考试结构与复习策略"><a class="markdownIt-Anchor" href="#一-期末考试结构与复习策略"></a> 一、期末考试结构与复习策略</h2>
+<h3 id="考试形式"><a class="markdownIt-Anchor" href="#考试形式"></a> 考试形式</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">题型</th>
+<th style="text-align:center">分值</th>
+<th style="text-align:left">考察内容</th>
+<th style="text-align:left">复习重点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>选择题</strong></td>
+<td style="text-align:center">20分</td>
+<td style="text-align:left">基础概念辨析、语法细节、运算符优先级等</td>
+<td style="text-align:left">熟读教材章节小结，掌握基本定义</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>程序分析题</strong></td>
+<td style="text-align:center">50分</td>
+<td style="text-align:left">程序填空、执行结果问答、程序改错/改写</td>
+<td style="text-align:left">精做所有例题与上机作业，理解控制流与函数调用</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>程序设计题</strong></td>
+<td style="text-align:center">30分</td>
+<td style="text-align:left">综合应用（如数组处理、字符串操作、简单算法）</td>
+<td style="text-align:left">动手编写并调试典型题目，掌握函数封装思想</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>考试要点</strong>：课本基础知识、教材例题、上机作业。</p>
+</blockquote>
+<hr />
+<h2 id="二-概述linux环境下程序编译与文件后缀名"><a class="markdownIt-Anchor" href="#二-概述linux环境下程序编译与文件后缀名"></a> 二、概述：Linux环境下程序编译与文件后缀名</h2>
+<p>在 Linux 环境下，C 程序从源码到可执行文件需经历<strong>预处理 → 编译 → 汇编 → 链接</strong>四个阶段。不同阶段生成不同类型的文件。</p>
+<h3 id="文件类型与后缀名"><a class="markdownIt-Anchor" href="#文件类型与后缀名"></a> 文件类型与后缀名</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">后缀名</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.c</code></td>
+<td style="text-align:left">C语言的源代码</td>
+<td style="text-align:left"><code>genlib.c</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.h</code></td>
+<td style="text-align:left">C语言的头文件，声明了常量、宏、系统全局变量和函数原型等。通过 <code>#include</code> 引入</td>
+<td style="text-align:left"><code>simpio.h</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.o</code></td>
+<td style="text-align:left">编译过程中生成的目标文件</td>
+<td style="text-align:left"><code>strlib.o</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.a</code></td>
+<td style="text-align:left">静态库（把多个 <code>.o</code> 文件打包）</td>
+<td style="text-align:left"><code>libcs.a</code></td>
+</tr>
+<tr>
+<td style="text-align:left">（无后缀）</td>
+<td style="text-align:left">（Linux下）一般是你编译好的可执行文件，通过 <code>./&lt;文件名&gt;</code> 来执行</td>
+<td style="text-align:left"><code>test</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="教学库列表作者提供"><a class="markdownIt-Anchor" href="#教学库列表作者提供"></a> 教学库列表（作者提供）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">库名</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>exception</code></td>
+<td style="text-align:left">异常处理</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>genlib</code></td>
+<td style="text-align:left">核心库，定义了 <code>bool</code>、<code>string</code>、<code>stream</code> 类型等</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>graphics</code></td>
+<td style="text-align:left">图形函数库</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>random</code></td>
+<td style="text-align:left">随机数库</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>simpio</code></td>
+<td style="text-align:left">输入数据读取库</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>strlib</code></td>
+<td style="text-align:left">简单字符串库</td>
+</tr>
+</tbody>
+</table>
+<h4 id="图形库-graphicsh-函数表"><a class="markdownIt-Anchor" href="#图形库-graphicsh-函数表"></a> 图形库 <code>graphics.h</code> 函数表</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">返回值</th>
+<th style="text-align:left">功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>InitGraphics</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>void</code></td>
+<td style="text-align:left">创建图形窗口，必须最先调用</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>MovePen</code></td>
+<td style="text-align:left"><code>double x, y</code></td>
+<td style="text-align:left"><code>void</code></td>
+<td style="text-align:left">将画笔移动到绝对坐标 (x, y)，不绘图</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>DrawLine</code></td>
+<td style="text-align:left"><code>double dx, dy</code></td>
+<td style="text-align:left"><code>void</code></td>
+<td style="text-align:left">从当前点绘制一条相对位移为 (dx, dy) 的直线</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>DrawArc</code></td>
+<td style="text-align:left"><code>double r, start, sweep</code></td>
+<td style="text-align:left"><code>void</code></td>
+<td style="text-align:left">从当前点开始绘制圆弧：<br>• <code>r</code>：半径（英寸）<br>• <code>start</code>：起始角度（°，从3点钟逆时针）<br>• <code>sweep</code>：扫掠角度（°，正=逆时针，负=顺时针）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GetWindowWidth</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>double</code></td>
+<td style="text-align:left">返回图形窗口宽度（英寸）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GetWindowHeight</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>double</code></td>
+<td style="text-align:left">返回图形窗口高度（英寸）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GetCurrentX</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>double</code></td>
+<td style="text-align:left">返回画笔当前 x 坐标（英寸）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GetCurrentY</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>double</code></td>
+<td style="text-align:left">返回画笔当前 y 坐标（英寸）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="随机数库-randomh-函数表"><a class="markdownIt-Anchor" href="#随机数库-randomh-函数表"></a> 随机数库 <code>random.h</code> 函数表</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">返回值</th>
+<th style="text-align:left">功能说明</th>
+<th style="text-align:left">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Randomize</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>void</code></td>
+<td style="text-align:left">用当前时间等不可预测值初始化随机种子</td>
+<td style="text-align:left"><code>Randomize();</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>RandomInteger</code></td>
+<td style="text-align:left"><code>int low, high</code></td>
+<td style="text-align:left"><code>int</code></td>
+<td style="text-align:left">返回 <code>[low, high]</code> 内的随机整数（含端点）</td>
+<td style="text-align:left"><code>die = RandomInteger(1, 6);</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>RandomReal</code></td>
+<td style="text-align:left"><code>double low, high</code></td>
+<td style="text-align:left"><code>double</code></td>
+<td style="text-align:left">返回 <code>[low, high)</code> 内的随机实数（左闭右开）</td>
+<td style="text-align:left"><code>x = RandomReal(0.0, 1.0);</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Random Chance</code></td>
+<td style="text-align:left"><code>double p</code></td>
+<td style="text-align:left"><code>bool</code></td>
+<td style="text-align:left">以概率 <code>p</code> 返回 <code>TRUE</code>（<code>0 ≤ p ≤ 1</code>）</td>
+<td style="text-align:left"><code>c if (RandomChance(0.5)) printf(&quot;Heads\n&quot;); </code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="输入输出库-simpioh-函数表"><a class="markdownIt-Anchor" href="#输入输出库-simpioh-函数表"></a> 输入输出库 <code>simpio.h</code> 函数表</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">返回值</th>
+<th style="text-align:left">功能说明</th>
+<th style="text-align:left">输入示例</th>
+<th style="text-align:left">是否重试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>GetInteger</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>int</code></td>
+<td style="text-align:left">从 <code>stdin</code> 读取一个整数</td>
+<td style="text-align:left"><code>&quot;42&quot;</code> → 42<br><code>&quot;-7 &quot;</code> → -7<br><code>&quot;12.3&quot;</code> → 无效（重试）</td>
+<td style="text-align:left">✅ 是</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GetLong</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>long</code></td>
+<td style="text-align:left">从 <code>stdin</code> 读取一个长整型</td>
+<td style="text-align:left"><code>&quot;1234567890&quot;</code> → 对应 long 值</td>
+<td style="text-align:left">✅ 是</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GetReal</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>double</code></td>
+<td style="text-align:left">从 <code>stdin</code> 读取一个浮点数</td>
+<td style="text-align:left"><code>&quot;3.1415&quot;</code> → 3.1415<br><code>&quot;-2e5&quot;</code> → -200000.0</td>
+<td style="text-align:left">✅ 是</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GetLine</code></td>
+<td style="text-align:left">无</td>
+<td style="text-align:left"><code>string</code></td>
+<td style="text-align:left">从 <code>stdin</code> 读取一整行（不含换行符）</td>
+<td style="text-align:left"><code>&quot;Hello, world!&quot;</code> → <code>&quot;Hello, world!&quot;</code></td>
+<td style="text-align:left">❌ 否（总是成功，即使空行）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ReadLine</code></td>
+<td style="text-align:left"><code>FILE *infile</code></td>
+<td style="text-align:left"><code>string</code> 或 <code>NULL</code></td>
+<td style="text-align:left">从文件读取一行（不含换行符）；若到文件末尾，返回 <code>NULL</code></td>
+<td style="text-align:left">同上</td>
+<td style="text-align:left">❌ 否</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="字符串库-strlibh-函数表"><a class="markdownIt-Anchor" href="#字符串库-strlibh-函数表"></a> 字符串库 <code>strlib.h</code> 函数表</h4>
+<h5 id="第一类基本操作"><a class="markdownIt-Anchor" href="#第一类基本操作"></a> 第一类：基本操作</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Concat(s1, s2)</code></td>
+<td style="text-align:left">拼接字符串</td>
+<td style="text-align:left"><code>&quot;Hi&quot; + &quot;!&quot;</code> → <code>&quot;Hi!&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>IthChar(s, i)</code></td>
+<td style="text-align:left">安全获取第 <code>i</code> 个字符</td>
+<td style="text-align:left"><code>IthChar(&quot;abc&quot;, 1)</code> → <code>'b'</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SubString(s, p1, p2)</code></td>
+<td style="text-align:left">提取子串（含边界修正）</td>
+<td style="text-align:left"><code>SubString(&quot;hello&quot;, 1, 3)</code> → <code>&quot;ell&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>CharToString(ch)</code></td>
+<td style="text-align:left">字符转字符串</td>
+<td style="text-align:left"><code>'X'</code> → <code>&quot;X&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>StringLength(s)</code></td>
+<td style="text-align:left">获取长度</td>
+<td style="text-align:left"><code>&quot;abc&quot;</code> → <code>3</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>CopyString(s)</code></td>
+<td style="text-align:left">深拷贝字符串</td>
+<td style="text-align:left">用于跨库兼容</td>
+</tr>
+</tbody>
+</table>
+<h5 id="第二类比较"><a class="markdownIt-Anchor" href="#第二类比较"></a> 第二类：比较</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>StringEqual(s1, s2)</code></td>
+<td style="text-align:left">判断两字符串是否完全相等（区分大小写）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>StringCompare(s1, s2)</code></td>
+<td style="text-align:left">字典序比较（类似 <code>strcmp</code>）</td>
+</tr>
+</tbody>
+</table>
+<h5 id="第三类搜索"><a class="markdownIt-Anchor" href="#第三类搜索"></a> 第三类：搜索</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>FindChar(ch, text, start)</code></td>
+<td style="text-align:left">从 <code>start</code> 开始找字符 <code>ch</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>FindString(str, text, start)</code></td>
+<td style="text-align:left">从 <code>start</code> 开始找子串 <code>str</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="第四类大小写转换"><a class="markdownIt-Anchor" href="#第四类大小写转换"></a> 第四类：大小写转换</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>ConvertToLowerCase(s)</code></td>
+<td style="text-align:left">全转小写</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ConvertToUpperCase(s)</code></td>
+<td style="text-align:left">全转大写</td>
+</tr>
+</tbody>
+</table>
+<h5 id="第五类数字-字符串"><a class="markdownIt-Anchor" href="#第五类数字-字符串"></a> 第五类：数字 ↔ 字符串</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>IntegerToString(n)</code></td>
+<td style="text-align:left">整数 → 字符串</td>
+<td style="text-align:left">支持负数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>StringToInteger(s)</code></td>
+<td style="text-align:left">字符串 → 整数</td>
+<td style="text-align:left">非法输入会报错</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>RealToString(d)</code></td>
+<td style="text-align:left">浮点数 → 字符串</td>
+<td style="text-align:left">使用 <code>%G</code> 格式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>StringToReal(s)</code></td>
+<td style="text-align:left">字符串 → 浮点数</td>
+<td style="text-align:left">非法输入会报错</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h3 id="常用编译命令"><a class="markdownIt-Anchor" href="#常用编译命令"></a> 常用编译命令</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">命令示例</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">编译生成目标文件</td>
+<td style="text-align:left"><code>gcc -c *.c</code></td>
+<td style="text-align:left">将所有 <code>.c</code> 文件编译为 <code>.o</code> 文件</td>
+</tr>
+<tr>
+<td style="text-align:left">打包静态链接库</td>
+<td style="text-align:left"><code>ar -rc libcs.a *.o</code></td>
+<td style="text-align:left">将当前目录下所有 <code>.o</code> 文件打包成 <code>libcs.a</code></td>
+</tr>
+<tr>
+<td style="text-align:left">编译自己写的代码（包含静态链接库）</td>
+<td style="text-align:left"><code>gcc mycode.c libcs.a -o mycode</code></td>
+<td style="text-align:left">链接主程序与教学库</td>
+</tr>
+<tr>
+<td style="text-align:left">运行自己的程序</td>
+<td style="text-align:left"><code>./mycode</code></td>
+<td style="text-align:left">执行可执行文件</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注</strong>：<code>*</code> 是通配符，代表任意数量（包括零个）的任意字符。</p>
+</blockquote>
+<hr />
+<h2 id="三-通过例子学习hello-world-程序结构"><a class="markdownIt-Anchor" href="#三-通过例子学习hello-world-程序结构"></a> 三、通过例子学习：Hello World 程序结构</h2>
+<p>一个最简单的 C 程序包含以下要素：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>     <span class="comment">// 1.a. 库包含</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.b. 注释：用于解释代码，编译器忽略</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;           <span class="comment">// 1.c. 主程序：程序入口点</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello, World!\n&quot;</span>); <span class="comment">// 1.d. Printf：标准输出函数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>1.a. 库包含</strong>：使用 <code>#include</code> 引入头文件，以使用其中声明的函数（如 <code>printf</code>）。</li>
+<li><strong>1.b. 注释</strong>：<code>//</code> 单行注释；<code>/* ... */</code> 多行注释。</li>
+<li><strong>1.c. 主程序</strong>：<code>main</code> 函数是程序唯一入口。</li>
+<li><strong>1.d. Printf</strong>：格式化输出函数，需包含 <code>&lt;stdio.h&gt;</code>。</li>
+</ul>
+<hr />
+<h2 id="四-数据类型"><a class="markdownIt-Anchor" href="#四-数据类型"></a> 四、数据类型</h2>
+<p>C 语言基本数据类型包括：</p>
+<ul>
+<li><code>int</code>：整型</li>
+<li><code>double</code>：双精度浮点型</li>
+<li><code>char</code>：字符型</li>
+<li><code>bool</code>：布尔型（需 <code>#include &quot;genlib.h&quot;</code>）</li>
+</ul>
+<hr />
+<h2 id="五-表达式"><a class="markdownIt-Anchor" href="#五-表达式"></a> 五、表达式</h2>
+<h3 id="3a-常量"><a class="markdownIt-Anchor" href="#3a-常量"></a> 3.a. 常量</h3>
+<ul>
+<li>整型常量：<code>123</code>, <code>-45</code></li>
+<li>浮点常量：<code>3.14</code>, <code>-0.001</code></li>
+<li>字符常量：<code>'A'</code>, <code>'\n'</code></li>
+<li>字符串常量：<code>&quot;Hello&quot;</code></li>
+<li>符号常量：<code>#define PI 3.14159</code></li>
+</ul>
+<h3 id="3b-变量"><a class="markdownIt-Anchor" href="#3b-变量"></a> 3.b. 变量</h3>
+<ul>
+<li>声明：<code>类型 变量名;</code></li>
+<li>初始化：<code>int x = 10;</code></li>
+</ul>
+<h3 id="3c-赋值"><a class="markdownIt-Anchor" href="#3c-赋值"></a> 3.c. 赋值</h3>
+<ul>
+<li>简单赋值：<code>x = 5;</code></li>
+<li>复合赋值：<code>x += 1;</code> 等价于 <code>x = x + 1;</code></li>
+</ul>
+<h3 id="3d-运算符"><a class="markdownIt-Anchor" href="#3d-运算符"></a> 3.d. 运算符</h3>
+<ul>
+<li>算术运算符：<code>+ - * / %</code></li>
+<li>关系运算符：<code>&lt; &lt;= &gt; &gt;= == !=</code></li>
+<li>逻辑运算符：<code>&amp;&amp; || !</code></li>
+<li>位运算符（略，大纲未强调）</li>
+</ul>
+<h3 id="3e-类型转换"><a class="markdownIt-Anchor" href="#3e-类型转换"></a> 3.e. 类型转换</h3>
+<ul>
+<li>自动转换（隐式）</li>
+<li>强制转换（显式）：<code>(int) 3.14</code></li>
+</ul>
+<hr />
+<h2 id="六-问题求解复合赋值"><a class="markdownIt-Anchor" href="#六-问题求解复合赋值"></a> 六、问题求解：复合赋值</h2>
+<p>复合赋值是简化赋值操作的语法糖：</p>
+<ul>
+<li><code>a += b</code> ⇨ <code>a = a + b</code></li>
+<li><code>a *= b</code> ⇨ <code>a = a * b</code></li>
+<li>等等。</li>
+</ul>
+<hr />
+<h2 id="七-控制语句"><a class="markdownIt-Anchor" href="#七-控制语句"></a> 七、控制语句</h2>
+<h3 id="2a-for-循环"><a class="markdownIt-Anchor" href="#2a-for-循环"></a> 2.a. <code>for</code> 循环</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (初始化; 条件; 更新) &#123;</span><br><span class="line">    <span class="comment">// 循环体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2b-while-循环"><a class="markdownIt-Anchor" href="#2b-while-循环"></a> 2.b. <code>while</code> 循环</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (条件) &#123;</span><br><span class="line">    <span class="comment">// 循环体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2c-if-else-语句"><a class="markdownIt-Anchor" href="#2c-if-else-语句"></a> 2.c. <code>if-else</code> 语句</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (条件) &#123;</span><br><span class="line">    <span class="comment">// 真分支</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 假分支</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="补充switch-语句"><a class="markdownIt-Anchor" href="#补充switch-语句"></a> 补充：<code>switch</code> 语句</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (表达式) &#123;</span><br><span class="line">    <span class="keyword">case</span> 常量<span class="number">1</span>:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="for-与-while-的相互转换"><a class="markdownIt-Anchor" href="#for-与-while-的相互转换"></a> <code>for</code> 与 <code>while</code> 的相互转换</h3>
+<p>任何 <code>for</code> 循环均可等价转换为 <code>while</code> 循环，反之亦然（需手动管理循环变量）。</p>
+<hr />
+<h2 id="八-函数"><a class="markdownIt-Anchor" href="#八-函数"></a> 八、函数</h2>
+<h3 id="1-函数声明"><a class="markdownIt-Anchor" href="#1-函数声明"></a> 1. 函数声明</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">返回类型 函数名(参数列表);</span><br><span class="line"><span class="comment">// 例：int max(int a, int b);</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-return-语句"><a class="markdownIt-Anchor" href="#2-return-语句"></a> 2. <code>return</code> 语句</h3>
+<ul>
+<li>用于从函数返回值并终止执行。</li>
+<li><code>void</code> 函数可省略 <code>return;</code> 或仅写 <code>return;</code>。</li>
+</ul>
+<h3 id="3-调用函数"><a class="markdownIt-Anchor" href="#3-调用函数"></a> 3. 调用函数</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = max(<span class="number">5</span>, <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="4-变量"><a class="markdownIt-Anchor" href="#4-变量"></a> 4. 变量</h3>
+<h4 id="4a-全局变量"><a class="markdownIt-Anchor" href="#4a-全局变量"></a> 4.a. 全局变量</h4>
+<ul>
+<li>定义在所有函数之外。</li>
+<li>作用域：从定义处到文件结束。</li>
+<li>生存期：整个程序运行期间。</li>
+</ul>
+<h4 id="4b-局部变量"><a class="markdownIt-Anchor" href="#4b-局部变量"></a> 4.b. 局部变量</h4>
+<ul>
+<li>定义在函数内部。</li>
+<li>作用域：仅在该函数内。</li>
+<li>生存期：函数调用开始至结束。</li>
+</ul>
+<h4 id="4c-变量的作用域"><a class="markdownIt-Anchor" href="#4c-变量的作用域"></a> 4.c. 变量的作用域</h4>
+<ul>
+<li>决定了变量在程序中的可见范围。</li>
+<li>遵循“就近原则”：局部变量屏蔽同名全局变量。</li>
+</ul>
+<hr />
+<h2 id="九-接口随机数库的定义和使用"><a class="markdownIt-Anchor" href="#九-接口随机数库的定义和使用"></a> 九、接口：随机数库的定义和使用</h2>
+<ul>
+<li>使用 <code>#include &quot;random.h&quot;</code></li>
+<li>核心函数：
+<ul>
+<li><code>Randomize()</code>：初始化随机数种子（通常在 <code>main</code> 开头调用一次）</li>
+<li><code>RandomInteger(low, high)</code>：生成 <code>[low, high]</code> 之间的随机整数</li>
+<li><code>RandomReal(low, high)</code>：生成 <code>[low, high)</code> 之间的随机实数</li>
+</ul>
+</li>
+</ul>
+<p>示例：</p>
+ <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;random.h&quot;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    Randomize();</span><br><span class="line">    <span class="type">int</span> dice = RandomInteger(<span class="number">1</span>, <span class="number">6</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="十-字符串与字符"><a class="markdownIt-Anchor" href="#十-字符串与字符"></a> 十、字符串与字符</h2>
+<h3 id="理解字符和字符串"><a class="markdownIt-Anchor" href="#理解字符和字符串"></a> 理解字符和字符串</h3>
+<ul>
+<li><strong>字符</strong>：<code>char</code> 类型，用单引号 <code>'A'</code> 表示。</li>
+<li><strong>字符串</strong>：以 <code>\0</code> 结尾的 <code>char</code> 数组，用双引号 <code>&quot;Hello&quot;</code> 表示。</li>
+</ul>
+<h3 id="1-枚举类型"><a class="markdownIt-Anchor" href="#1-枚举类型"></a> 1. 枚举类型</h3>
+<h4 id="1a-定义"><a class="markdownIt-Anchor" href="#1a-定义"></a> 1.a. 定义</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Color</span> &#123;</span> RED, GREEN, BLUE &#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="1b-操作"><a class="markdownIt-Anchor" href="#1b-操作"></a> 1.b. 操作</h4>
+<ul>
+<li>默认值：<code>RED=0</code>, <code>GREEN=1</code>, <code>BLUE=2</code></li>
+<li>可显式赋值：<code>enum Status { OFF=0, ON=1 };</code></li>
+<li>使用：<code>enum Color c = RED;</code></li>
+</ul>
+<h3 id="2-字符类型"><a class="markdownIt-Anchor" href="#2-字符类型"></a> 2. 字符类型</h3>
+<h4 id="2a-char"><a class="markdownIt-Anchor" href="#2a-char"></a> 2.a. <code>char</code></h4>
+<ul>
+<li>存储单个字符，本质是整数（ASCII码）。</li>
+</ul>
+<h4 id="2b-ascii码"><a class="markdownIt-Anchor" href="#2b-ascii码"></a> 2.b. ASCII码</h4>
+<ul>
+<li>字符与整数一一对应，如 <code>'A' == 65</code>。</li>
+</ul>
+<h4 id="2c-转义符"><a class="markdownIt-Anchor" href="#2c-转义符"></a> 2.c. 转义符</h4>
+<ul>
+<li><code>\n</code> 换行，<code>\t</code> 制表，<code>\\</code> 反斜杠，<code>\'</code> 单引号，<code>\&quot;</code> 双引号。</li>
+</ul>
+<h4 id="2d-字符运算"><a class="markdownIt-Anchor" href="#2d-字符运算"></a> 2.d. 字符运算</h4>
+<ul>
+<li>可进行算术运算：<code>'A' + 1 == 'B'</code></li>
+</ul>
+<h4 id="2e-ctypeh-库"><a class="markdownIt-Anchor" href="#2e-ctypeh-库"></a> 2.e. <code>ctype.h</code> 库</h4>
+<ul>
+<li>提供字符判断函数：
+<ul>
+<li><code>isalpha(c)</code>：是否字母</li>
+<li><code>isdigit(c)</code>：是否数字</li>
+<li><code>isupper(c)</code> / <code>islower(c)</code>：大小写判断</li>
+<li><code>toupper(c)</code> / <code>tolower(c)</code>：大小写转换</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-strlibh-库教学库"><a class="markdownIt-Anchor" href="#3-strlibh-库教学库"></a> 3. <code>strlib.h</code> 库（教学库）</h3>
+<p>该库将字符串抽象为 <code>string</code> 类型，提供安全、易用的接口。</p>
+<h4 id="3a-创建一个字符串"><a class="markdownIt-Anchor" href="#3a-创建一个字符串"></a> 3.a. 创建一个字符串</h4>
+<ul>
+<li>字符串常量直接赋值：<code>string s = &quot;Hello&quot;;</code></li>
+</ul>
+<h4 id="3b-获取长度"><a class="markdownIt-Anchor" href="#3b-获取长度"></a> 3.b. 获取长度</h4>
+<ul>
+<li><code>int len = StringLength(s);</code></li>
+</ul>
+<h4 id="3c-从字符串里选择字符"><a class="markdownIt-Anchor" href="#3c-从字符串里选择字符"></a> 3.c. 从字符串里选择字符</h4>
+<ul>
+<li><code>char ch = IthChar(s, i);</code> // 带边界检查</li>
+</ul>
+<h4 id="3d-连接两个字符串"><a class="markdownIt-Anchor" href="#3d-连接两个字符串"></a> 3.d. 连接两个字符串</h4>
+<ul>
+<li><code>string result = Concat(s1, s2);</code></li>
+</ul>
+<h4 id="3e-字符转换成字符串"><a class="markdownIt-Anchor" href="#3e-字符转换成字符串"></a> 3.e. 字符转换成字符串</h4>
+<ul>
+<li><code>string s = CharToString('A');</code></li>
+</ul>
+<h4 id="3f-抽取字符串一部分"><a class="markdownIt-Anchor" href="#3f-抽取字符串一部分"></a> 3.f. 抽取字符串一部分</h4>
+<ul>
+<li><code>string sub = SubString(s, start, finish);</code> // 闭区间 <code>[start, finish]</code></li>
+</ul>
+<h4 id="3g-比较两个字符串"><a class="markdownIt-Anchor" href="#3g-比较两个字符串"></a> 3.g. 比较两个字符串</h4>
+<ul>
+<li><code>bool eq = StringEqual(s1, s2);</code></li>
+<li><code>int cmp = StringCompare(s1, s2);</code> // &lt;0, =0, &gt;0</li>
+</ul>
+<h4 id="3h-在字符串里搜索"><a class="markdownIt-Anchor" href="#3h-在字符串里搜索"></a> 3.h. 在字符串里搜索</h4>
+<ul>
+<li><code>int pos = FindChar(ch, text, start);</code></li>
+<li><code>int pos = FindString(substr, text, start);</code></li>
+</ul>
+<h4 id="3i-大小写转换"><a class="markdownIt-Anchor" href="#3i-大小写转换"></a> 3.i. 大小写转换</h4>
+<ul>
+<li><code>string lower = ConvertToLowerCase(s);</code></li>
+<li><code>string upper = ConvertToUpperCase(s);</code></li>
+</ul>
+<h4 id="3j-数值转换"><a class="markdownIt-Anchor" href="#3j-数值转换"></a> 3.j. 数值转换</h4>
+<ul>
+<li><code>string s = IntegerToString(123);</code></li>
+<li><code>int n = StringToInteger(&quot;123&quot;);</code></li>
+<li><code>string s = RealToString(3.14);</code></li>
+<li><code>double d = StringToReal(&quot;3.14&quot;);</code></li>
+</ul>
+<blockquote>
+<p><strong>警告</strong>：<code>StringToInteger</code> 和 <code>StringToReal</code> 在输入非法时会报错（异常处理）。</p>
+</blockquote>
+<hr />
+<h2 id="十一-数组"><a class="markdownIt-Anchor" href="#十一-数组"></a> 十一、数组</h2>
+<h3 id="一维数组的定义-使用-参数传递"><a class="markdownIt-Anchor" href="#一维数组的定义-使用-参数传递"></a> 一维数组的定义、使用、参数传递</h3>
+<h4 id="1-数组的声明"><a class="markdownIt-Anchor" href="#1-数组的声明"></a> 1. 数组的声明</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> scores[<span class="number">10</span>]; <span class="comment">// 声明含10个整数的数组</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-通过下标选择数组元素"><a class="markdownIt-Anchor" href="#2-通过下标选择数组元素"></a> 2. 通过下标选择数组元素</h4>
+<ul>
+<li>下标从 <code>0</code> 开始：<code>scores[0]</code> 是第一个元素。</li>
+<li>最大下标为 <code>size - 1</code>。</li>
+</ul>
+<h4 id="3-sizeof-运算符"><a class="markdownIt-Anchor" href="#3-sizeof-运算符"></a> 3. <code>sizeof()</code> 运算符</h4>
+<ul>
+<li><code>sizeof(scores)</code> 返回整个数组字节数。</li>
+<li><code>sizeof(scores) / sizeof(scores[0])</code> 计算元素个数（仅在数组作用域内有效）。</li>
+</ul>
+<h4 id="4-数组的传参"><a class="markdownIt-Anchor" href="#4-数组的传参"></a> 4. 数组的传参</h4>
+<h5 id="4a-传参机制"><a class="markdownIt-Anchor" href="#4a-传参机制"></a> 4.a. 传参机制</h5>
+<ul>
+<li>数组作为参数时，<strong>传递的是首元素地址（指针）</strong>。</li>
+<li>函数无法获知原数组大小，<strong>必须额外传入长度参数</strong>。</li>
+<li>函数内对数组的修改会<strong>直接影响原数组</strong>。</li>
+</ul>
+<p>示例：</p>
+ <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">printArray</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> size)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="十二-指针"><a class="markdownIt-Anchor" href="#十二-指针"></a> 十二、指针</h2>
+<h3 id="1-声明指针变量"><a class="markdownIt-Anchor" href="#1-声明指针变量"></a> 1. 声明指针变量</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p; <span class="comment">// p 是一个指向 int 的指针</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-和-运算符"><a class="markdownIt-Anchor" href="#2-和-运算符"></a> 2. <code>&amp;</code> 和 <code>*</code> 运算符</h3>
+<ul>
+<li><code>&amp;x</code>：取变量 <code>x</code> 的地址</li>
+<li><code>*p</code>：访问指针 <code>p</code> 所指向的值（解引用）</li>
+</ul>
+<h3 id="3-引用传参"><a class="markdownIt-Anchor" href="#3-引用传参"></a> 3. 引用传参</h3>
+<ul>
+<li>通过传递地址，函数可修改主调函数中的变量。</li>
+<li>示例：<code>swap(&amp;a, &amp;b);</code></li>
+</ul>
+<h3 id="4-指针和数组"><a class="markdownIt-Anchor" href="#4-指针和数组"></a> 4. 指针和数组</h3>
+<h4 id="4a-指针运算"><a class="markdownIt-Anchor" href="#4a-指针运算"></a> 4.a. 指针运算</h4>
+<ul>
+<li><code>p + i</code>：指向 <code>p</code> 后第 <code>i</code> 个同类型元素的地址</li>
+<li><code>*(p + i)</code> 等价于 <code>p[i]</code></li>
+</ul>
+<h4 id="4b-指针与数组的关系"><a class="markdownIt-Anchor" href="#4b-指针与数组的关系"></a> 4.b. 指针与数组的关系</h4>
+<ul>
+<li><strong>数组名是常量指针</strong>：<code>arr == &amp;arr[0]</code></li>
+<li><code>arr[i]</code> 等价于 <code>*(arr + i)</code></li>
+</ul>
+<blockquote>
+<p><strong>注</strong>：<code>scanf()</code> 和动态内存分配（<code>malloc</code>/<code>free</code>）不考。</p>
+</blockquote>
+<hr />
+<h2 id="十三-再论字符串"><a class="markdownIt-Anchor" href="#十三-再论字符串"></a> 十三、再论字符串</h2>
+<h3 id="1-字符数组"><a class="markdownIt-Anchor" href="#1-字符数组"></a> 1. 字符数组</h3>
+<h4 id="1a-初始化"><a class="markdownIt-Anchor" href="#1a-初始化"></a> 1.a. 初始化</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> s1[] = <span class="string">&quot;Hello&quot;</span>;      <span class="comment">// 自动加 &#x27;\0&#x27;</span></span><br><span class="line"><span class="type">char</span> s2[<span class="number">6</span>] = &#123;<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;o&#x27;</span>,<span class="string">&#x27;\0&#x27;</span>&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="1b-字符指针"><a class="markdownIt-Anchor" href="#1b-字符指针"></a> 1.b. 字符指针</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *p = <span class="string">&quot;Hello&quot;</span>; <span class="comment">// p 指向字符串常量（不可修改）</span></span><br></pre></td></tr></table></figure>
+<h4 id="1c-输出函数"><a class="markdownIt-Anchor" href="#1c-输出函数"></a> 1.c. 输出函数</h4>
+<ul>
+<li><code>printf(&quot;%s&quot;, s);</code></li>
+<li><code>fputs(s, stdout);</code></li>
+</ul>
+<h4 id="1d-输入函数"><a class="markdownIt-Anchor" href="#1d-输入函数"></a> 1.d. 输入函数</h4>
+<ul>
+<li><code>scanf(&quot;%s&quot;, s);</code> // 遇空白停止，<strong>有溢出风险</strong></li>
+<li><code>fgets(s, size, stdin);</code> // 安全，推荐（但会读入换行符）</li>
+</ul>
+<blockquote>
+<p><strong>注</strong>：<code>gets()</code> 已废弃，因无缓冲区保护。</p>
+</blockquote>
+<h3 id="2-stringh-库标准库"><a class="markdownIt-Anchor" href="#2-stringh-库标准库"></a> 2. <code>string.h</code> 库（标准库）</h3>
+<h4 id="2a-strcpy"><a class="markdownIt-Anchor" href="#2a-strcpy"></a> 2.a. <code>strcpy</code></h4>
+<ul>
+<li><code>strcpy(dest, src);</code> // 复制字符串（危险）</li>
+</ul>
+<h4 id="2b-strncpy"><a class="markdownIt-Anchor" href="#2b-strncpy"></a> 2.b. <code>strncpy</code></h4>
+<ul>
+<li><code>strncpy(dest, src, n);</code> // 复制最多 n 字节</li>
+</ul>
+<h4 id="2c-strlen"><a class="markdownIt-Anchor" href="#2c-strlen"></a> 2.c. <code>strlen</code></h4>
+<ul>
+<li><code>size_t len = strlen(s);</code> // 返回长度（不含 <code>\0</code>）</li>
+</ul>
+<h4 id="2d-strcat"><a class="markdownIt-Anchor" href="#2d-strcat"></a> 2.d. <code>strcat</code></h4>
+<ul>
+<li><code>strcat(dest, src);</code> // 追加字符串</li>
+</ul>
+<h4 id="2e-strcmp"><a class="markdownIt-Anchor" href="#2e-strcmp"></a> 2.e. <code>strcmp</code></h4>
+<ul>
+<li><code>int cmp = strcmp(s1, s2);</code> // 字典序比较</li>
+</ul>
+<h3 id="3-字符串惯用法"><a class="markdownIt-Anchor" href="#3-字符串惯用法"></a> 3. 字符串惯用法</h3>
+<h4 id="3a-搜索字符串空字符惯用法"><a class="markdownIt-Anchor" href="#3a-搜索字符串空字符惯用法"></a> 3.a. 搜索字符串空字符惯用法</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; s[i] != <span class="string">&#x27;\0&#x27;</span>; i++) &#123;</span><br><span class="line">    <span class="comment">// 遍历字符串</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3b-复制字符串惯用法"><a class="markdownIt-Anchor" href="#3b-复制字符串惯用法"></a> 3.b. 复制字符串惯用法</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; (dest[i] = src[i]) != <span class="string">&#x27;\0&#x27;</span>; i++);</span><br></pre></td></tr></table></figure>
+<h3 id="4-字符串数组二维字符数组"><a class="markdownIt-Anchor" href="#4-字符串数组二维字符数组"></a> 4. 字符串数组（二维字符数组）</h3>
+<ul>
+<li>用于存储多个字符串。</li>
+<li>声明：<code>char names[10][50];</code> // 10个字符串，每个最长49字符+<code>\0</code></li>
+<li>使用：<code>strcpy(names[0], &quot;Alice&quot;);</code></li>
+</ul>
+<hr />
+<h2 id="十四-记录结构体"><a class="markdownIt-Anchor" href="#十四-记录结构体"></a> 十四、记录（结构体）</h2>
+<h3 id="记录的概念"><a class="markdownIt-Anchor" href="#记录的概念"></a> 记录的概念</h3>
+<ul>
+<li><strong>记录（Record）</strong>：将多个相关数据项组合成一个逻辑单元。</li>
+<li>在 C 中通过 <code>struct</code> 实现。</li>
+</ul>
+<h3 id="创建记录的数据库"><a class="markdownIt-Anchor" href="#创建记录的数据库"></a> 创建记录的数据库</h3>
+<ul>
+<li>定义结构体类型：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> &#123;</span></span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="type">int</span> id;</span><br><span class="line">    <span class="type">double</span> gpa;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li>声明结构体变量：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> <span class="title">s1</span>;</span></span><br><span class="line">s1.id = <span class="number">12345</span>;</span><br><span class="line">s1.name = <span class="string">&quot;Alice&quot;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li>数组 of 结构体：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> <span class="keyword">class</span>[30];</span></span><br><span class="line"><span class="class"><span class="keyword">class</span>[0].<span class="title">gpa</span> =</span> <span class="number">3.8</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>结构体是构建更复杂数据结构（如链表）的基础。</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/01/05/%E8%A1%8C%E5%88%97%E5%BC%8F/" rel="next" title="行列式 Determinant">
+                  行列式 Determinant <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="author" itemprop="copyrightHolder">by fanzijun</span>
+  </div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
